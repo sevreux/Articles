@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}</h2>
+<div class="container mt-2 ">
+<div class="jumbotron "><h2>{{article.titre}}</h2>
+    <div>
+        <p class="text-break">{{article.description}}</p>
+    </div>
+</div>
+    {% for commentaire in commentaires %}
+    <div class="mb-2 p-2 border border-primary"  >
+            <h4>{{commentaire.pseudo}}</h4>
+            <p class="text-break">{{commentaire.message}}</p>
+        </div>
+    {% endfor %}
+    <a href="/{{article.titre}}/{{article.IdArticle}}/Commentaires"><button  class="btn btn-primary">ajouter commentaire</button></a>
+</div>
+{% endblock %}

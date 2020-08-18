@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="m-5 p5 bg-ligth ">
+    <H2 class="w-25 text-center border border-primary">{{titreArticle}}</H2>
+<div class="container">
+    <div class="w-50 m-5 p-5">
+    <h3>Ajouter un commentaire:</h3> 
+    {{form(commentaireForm)}}
+    </div>
+</div>  
+{% endblock %}
+

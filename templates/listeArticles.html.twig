@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+ {% block body %}
+        <div class="container mt-2">
+        {% for article in articles %}
+            <div class="jumbotron">
+                <h2 class="display-6">{{article.titre}}</h2>
+                <p class="lead text-break">{{article.description [:100]}}</p>
+                <a class="btn btn-primary btn-lg" href="/Article/{{article.IdArticle}}" role="button">Voir article</a>
+            </div> 
+        {% endfor %}
+{% endblock %}
